@@ -127,12 +127,12 @@ function loadWidget(config) {
     }
 
     (function initModel() {
-        let modelId = localStorage.getItem("modelId"),
-            modelTexturesId = localStorage.getItem("modelTexturesId");
+        let modelId = 2,
+            modelTexturesId = 53;
         if (modelId === null) {
             // 首次访问加载 指定模型 的 指定材质
-            modelId = 3; // 模型 ID
-            modelTexturesId = 20; // 材质 ID
+            modelId = 2; // 模型 ID
+            modelTexturesId = 53; // 材质 ID
         }
         model.loadModel(modelId, modelTexturesId);
         fetch(config.waifuPath)
